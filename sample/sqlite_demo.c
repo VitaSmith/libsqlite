@@ -27,7 +27,6 @@
 #include <psp2/kernel/processmgr.h>
 #include <psp2/io/fcntl.h>
 
-#include "utils.h"
 #include "console.h"
 #include "sqlite3.h"
 

@@ -11,7 +11,8 @@
 #include <psp2/kernel/sysmem.h>
 
 #include "draw.h"
-#include "utils.h"
+
+#define align_mem(addr, align) (((addr) + ((align) - 1)) & ~((align) - 1))
 
 extern const unsigned char msx_font[];
 
