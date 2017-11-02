@@ -9,12 +9,17 @@ Prerequisites:
 
 Once all the prerequisites have been met, you can compile this library by typing:
 ```
-$ make
+cd libsqlite
+make
 ```
 
 Note that if you choose to run `make install`, the SDK's `include/psp2/sqlite.h`
 will be overwritten with this repository's version (which adds `sqlite3_rw_init()`
 and `sqlite3_rw_exit()` to it).
+
+A demo SQLite application is also provided in the `sample/` directory.
+This demo, which doesn't require any special permissions, will create or update
+a sample database residing at `ux0:data/sqlite_demo.db`.
 
 ## Credits
 * Thanks to __xyzz__ for the original VFS override code.

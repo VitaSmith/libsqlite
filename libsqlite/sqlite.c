@@ -1,7 +1,7 @@
 /*
   PS Vita override for R/W SQLite functionality
-  Copyright (C) 2017 VitaSmith
-  Based on original work (C) 2015 xyzz
+  Copyright © 2017 VitaSmith
+  Based on original work © 2015 xyzz
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
