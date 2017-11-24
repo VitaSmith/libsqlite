@@ -29,7 +29,7 @@ eboot.bin: $(TARGET).velf
 $(TARGET).elf: $(OBJS)
 	$(CC) $(CFLAGS) $^ $(LIBS) -o $@
 
-update: eboot.bin
+install: eboot.bin
 	@cp -v eboot.bin /g/app/$(TITLE_ID)/
 
 clean:
