@@ -200,6 +200,12 @@ static int vita_xSync(sqlite3_file *file, int flags)
 
 static int vita_xOpen(sqlite3_vfs *vfs, const char *name, sqlite3_file *file, int flags, int *out_flags)
 {
+	// sqlite can call open with a NULL name, we need to create a temporary
+	// file then
+	char tempbuf[] = "ux0:data/sqlite-tmp-XXXXXX";
+	if (name == NULL)
+		name = mktemp(tempbuf);
+
 	sqlite3_vfs* org_vfs = (sqlite3_vfs*)vfs->pAppData;
 
 	LOG("open %s: flags = %08x, ", name, flags);
